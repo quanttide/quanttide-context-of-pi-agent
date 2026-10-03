@@ -1,6 +1,18 @@
 # pi-hermes-memory
 
-`pi-hermes-memory` 是 pi 生态的检索与记忆扩展，通过 `settings.json` 的 `packages` 字段以扩展形式加载，挂接 pi 的事件钩子，将主程序的 JSONL 单向导入 SQLite，供 `session_search`、`memory_search` 使用。会话事实本身由 pi 主程序写入，见 [pi 主程序](./pi-main.md)。
+`pi-hermes-memory` 是 pi 生态的检索与记忆扩展，通过 `settings.json` 的 `packages` 字段加载，挂接 pi 的事件钩子，将主程序的 JSONL 单向导入 SQLite，供 `session_search`、`memory_search` 使用。
+
+## 数据的三层归属
+
+pi 生态的数据分三层，各自独立管理。
+
+| 数据 | 位置 | 写入方 |
+|:--|:--|:--|
+| 会话事实 | `~/.pi/agent/sessions/<项目>/<时间戳>_<uuid>.jsonl` | pi 主程序，追加写入 |
+| 记忆真源 | `~/.pi/agent/pi-hermes-memory/MEMORY.md`、`USER.md`、`STANDING.md` 与 `~/.pi/agent/projects-memory/<项目>/MEMORY.md` | 扩展与用户，可手工编辑 |
+| 检索索引 | `~/.pi/agent/pi-hermes-memory/sessions.db` | 扩展 `pi-hermes-memory` |
+
+pi 主程序只认识 JSONL 文件，写入会话事实这一层；另外两层由本扩展维护，会话事实的格式与读取方式见 [pi 主程序](./pi-main.md)。
 
 ## 检索索引是可重建的派生数据
 
