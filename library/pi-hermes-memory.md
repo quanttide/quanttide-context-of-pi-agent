@@ -22,6 +22,8 @@ pi 主程序只认识 JSONL 文件，写入会话事实这一层；另外两层�
 
 记忆以 Markdown 为真源，SQLite 仅为检索镜像。每次写入先落 Markdown，成功后才尽力同步进 `memories` 表；Markdown 写入失败时不降级为只存 SQLite。`STANDING.md`（固定指令）在扩展代码层面禁止 agent 自写，只有用户可以编辑。
 
+真源按作用域分两处：全局记忆在 `~/.pi/agent/pi-hermes-memory/`，项目记忆在 `~/.pi/agent/projects-memory/<项目>/`，后者仅在 cwd 匹配该项目时被 `memory_search` 检索。两处均由本扩展写入，pi 主程序不写。
+
 ## 并发协调
 
 扩展的写进程（后台复习、记忆合并、会话收尾）通过独立的 `~/.pi/agent/.pi-hermes-locks.sqlite` 抢锁协调，会话关闭时对 `sessions.db` 做 WAL checkpoint。锁只约束写方，只读查询以 busy timeout 兜底即可。
