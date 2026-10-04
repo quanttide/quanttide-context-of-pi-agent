@@ -1,10 +1,10 @@
-# qtfounder
+# quanttide-founder
 
-qtfounder 项目的 Pi 记忆——**草稿**，先落在语境仓，定稿后再归位。
+quanttide-founder 项目的 Pi 记忆——**草稿**，先落在语境仓，定稿后再归位。
 
 ## 来源
 
-本地 Pi 记忆扩展（pi-hermes-memory）的项目级记忆：`~/.pi/agent/projects-memory/quanttide-founder/MEMORY.md`。该目录下的工作以 qtfounder 这一应用为主线，故归于此名。
+本地 Pi 记忆扩展（pi-hermes-memory）的项目级记忆：`~/.pi/agent/projects-memory/quanttide-founder/MEMORY.md`，共 13 条。
 
 ## 为什么在语境仓
 
@@ -18,4 +18,4 @@ qtfounder 项目的 Pi 记忆——**草稿**，先落在语境仓，定稿后�
 
 ## 文档
 
-- `memory.md` — 脱敏后的记忆条目
+- `memory.md` — 脱敏后的记忆条目（11 条）
