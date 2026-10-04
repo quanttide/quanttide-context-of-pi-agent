@@ -28,19 +28,14 @@ assets/fiction 三本小说晋江资料（index.md 按晋江发文表单字段�
 
 <!-- created=2026-09-02, last=2026-09-06 -->
 
-## 五、qtfiction 站点下线
 
-qtfiction（自有域名与对象存储桶）于 2026-08-25 应用户要求下线：清空桶全部 55 个对象（未备份，用户明确指示）、CDN Directory 全量刷新后首页与 /series 均返回 404。用户澄清目的：小说本就开源、无人访问，下线是为收掉线上运维负担（CDN 域名、OSS、workflow），非内容撤回——勿建议转私有（已否决）。彻底下线已完成：apps/qtfiction/.github/workflows/deploy-site.yml 已删除（commit 1207e2e）；CDN 域名已 StopCdnDomain（DomainStatus: offline）。GitHub 仓库 quanttide/qtfiction 保留未删（用户曾要求删除，gh 缺 delete_repo scope 且设备授权流程在 pi 环境屡次被中断，用户决定跳过），但已从 quanttide-founder 主仓库移除 submodule 引用（commit d3b067f）。恢复上线需重新启用 CDN 域名 + 重建 deploy workflow + 重新添加 submodule。
-
-<!-- created=2026-09-04, last=2026-09-05 -->
-
-## 六、v1.1.0 发布
+## 五、v1.1.0 发布
 
 assets/fiction（quanttide-fiction-of-founder）2026-09-05 发布 v1.1.0：先 cherry-pick fa3e5bb 补回 [1.0.0] 条目，再新增 [1.1.0] 条目（2b65526，Added/Changed/Removed 覆盖 v1.0.0 后 262 个提交），release publish --yes 成功。同批新增 职场言情/outline.md 故事大纲：# 故事大纲 → ## 分幕梳理（五幕：重逢1-5/靠近6-12/交心13-18/日常与磨合19-26/确认与远方27-29，按编号排列四阶段全部带编号文件合并同编号稿件）→ ## 主线脉络（用户纠正过层级：二级标题，其下四条三级标题各展开一段：双向暗恋久别重逢/孤独的相互救赎/重新认识一次/事业与感情互文）。已知缺口：编号 4/6/7/21 无文件；编号 3 场景版「男主演讲」与改稿版「展会再遇」两条线待取舍。v1.1.0 同时移除全库 .quanttide 写作契约文件（勿重建）。
 
 <!-- created=2026-09-05, last=2026-09-05 -->
 
-## 七、小说元层定位
+## 六、小说元层定位
 
 用户创作日志中的小说元层定位（创作协助参考）：职场言情在消化暗恋和执念（如果我当时说出口了呢？）；重生言情像回到 20 岁看当时的压力和选择（如果我带着现在的知道回去呢？）；校园言情是对美好青春逝去的怀念（如果那个美好的时候没有结束呢？）。三部小说背后共同问题是「如果换一种活法，我会不会更好？」，与用户当前战略压力、年龄与经济诉求相关；用户自认创作围绕自身核心议题、是消耗精力的事。
 

@@ -4,7 +4,7 @@ quanttide-founder 项目的 Pi 记忆——**草稿**，先落在语境仓，定
 
 ## 来源
 
-本地 Pi 记忆扩展（pi-hermes-memory）的项目级记忆：`~/.pi/agent/projects-memory/quanttide-founder/MEMORY.md`，共 13 条。
+本地 Pi 记忆扩展（pi-hermes-memory）的项目级记忆：`~/.pi/agent/projects-memory/quanttide-founder/MEMORY.md`，共 13 条，其中 12 条入档。
 
 ## 脱敏口径
 
@@ -19,7 +19,7 @@ quanttide-founder 项目的 Pi 记忆——**草稿**，先落在语境仓，定
 
 | 文件夹 | 子模块路径 | 仓库 | 记忆 |
 |--------|-----------|------|------|
-| `fiction/` | `assets/fiction` | quanttide-fiction-of-founder | 7 条 |
+| `fiction/` | `assets/fiction` | quanttide-fiction-of-founder | 6 条 |
 | `memory/` | `assets/memory` | quanttide-memory-of-founder | 2 条 |
 | `qtgame-war/` | `apps/qtgame-war` | qtgame-war | 2 条 |
 | `quanttide-founder-lab/` | `examples/quanttide-founder-lab` | quanttide-founder-lab | 1 条 |
